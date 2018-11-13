@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.0'
+}
+
+group 'name.zeno'
+version '1.0-SNAPSHOT'
+
+apply from: 'http://maven.mjtown.cn/maven-java-idea.gradle'
+mavenConf {
+    groupId "name.zeno.retrofit2"
+    artifactId "converter-string"
+    version "1.0.0"
+
+//  repositoryUrl "file:///Users/zenochan/.m2/repository"
+    repositoryUrl "scp://root@mjtown.cn/root/nginx/maven"
+}
+confMaven()
+
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "com.squareup.retrofit2:retrofit:2.3.0"
+    compileOnly "com.squareup.okhttp3:okhttp:3.9.1"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
