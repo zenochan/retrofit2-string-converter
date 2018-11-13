@@ -1,10 +1,7 @@
 
 ```groovy
 maven {url "http://maven.mjtown.cn/"}
-compile "name.zeno.retrofit2:converter-string:1.0.0"
-```
-
-
+compile zzeno
 ```kotlin
 class StringConverterFactory private constructor() : Converter.Factory() {
 
