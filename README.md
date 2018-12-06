@@ -1,14 +1,15 @@
 
 ```groovy
-maven {url "http://maven.mjtown.cn/"}
-compile zzeno
-```kotlin
+maven {url "http://maven.izeno.cn/"}
 class StringConverterFactory private constructor() : Converter.Factory() {
 
     override fun responseBodyConverter(
         type: Type, annotations: Array<Annotation>, retrofit: Retrofit
     ): Converter<ResponseBody, *>? {
-        return StringResponseBodyConverter()
+        return when (type) {
+            String::class.java -> StringResponseBodyConverter()
+            else -> super.responseBodyConverter(type, annotations, retrofit)
+        }
     }
 
     companion object {
