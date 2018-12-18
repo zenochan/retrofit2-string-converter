@@ -1,4 +1,4 @@
-package name.zeno.retrofit2.converter.string
+package cn.izeno.retrofit2.converter.string
 
 import okhttp3.ResponseBody
 import retrofit2.Converter
