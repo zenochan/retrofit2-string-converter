@@ -24,7 +24,7 @@ class StringConverterFactory private constructor() : Converter.Factory() {
         methodAnnotations: Array<Annotation>,
         retrofit: Retrofit
     ): Converter<*, RequestBody>? {
-        return  when(type){
+        return when (type) {
             String::class.java -> StringRequestBodyConverter()
             else -> super.requestBodyConverter(type, parameterAnnotations, methodAnnotations, retrofit)
 

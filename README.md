@@ -1,6 +1,6 @@
 
 ```groovy
-maven {url "http://maven.izeno.cn/"}
+maven {url "http://maven.izeno.cn:8088/"}
 
 dependencies{
   compile "name.zeno:retrofit2-converter-string:1.0.2"
