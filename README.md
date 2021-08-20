@@ -1,11 +1,13 @@
 
 ```groovy
-maven {url "http://maven.izeno.cn:8088/"}
+maven {
+  url "http://maven.izeno.cn:88/repository/maven-public"
+  allowInsecureProtocol true
+}
 
 dependencies{
   compile "name.zeno:retrofit2-converter-string:1.0.2"
 }
-
 ```
 
 
